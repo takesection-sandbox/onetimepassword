@@ -57,7 +57,7 @@ object OneTimePassword extends App with OneTimePasswordAlgorithm {
     val is = new FileInputStream(path.toFile)
     try {
       val p = new Properties()
-      p.load(new FileInputStream(path.toFile))
+      p.load(is)
       p.asScala
     } finally {
       is.close()
