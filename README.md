@@ -13,6 +13,14 @@ address=xxxx-account-mfa-device@XXXXXXXXXXXX
 secret=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-# Run
+```
+$ chmod 500 ~/.onetime
+$ chmod 400 ~/.onetime/onetime.properties
+```
 
-sbt run
+# Build and Run
+
+```
+$ sbt assembly
+$ java -jar target/scala-2.12/jp.pigumer.onetime-assembly-0.0.1-SNAPSHOT.jar
+```
